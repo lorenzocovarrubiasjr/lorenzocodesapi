@@ -48,6 +48,6 @@ func main() {
 	if port == "" {
 		port = "8080" // Fallback for local testing
 	}
-	log.Println("Server started on http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", corsHandler(r)))
+	log.Println("Server running on port", port)
+	log.Fatal(http.ListenAndServe(":"+port, corsHandler(r)))
 }
