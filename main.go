@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"lorenzocodes-api/handlers"
 
@@ -43,6 +44,10 @@ func main() {
 	)
 
 	// Start server
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // Fallback for local testing
+	}
 	log.Println("Server started on http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", corsHandler(r)))
 }
