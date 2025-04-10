@@ -1,9 +1,24 @@
-
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
+# Go Build Artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+lorenzocodes-api  # Ignore the binary unless you commit it explicitly
+
+# Logs and Temp Files
 *.log
 *.zip
-.git/
+
+# Dependency Directories (if vendored)
+vendor/
+
+# IDE/Editor Files
+*.idea/
+*.vscode/
+*.swp
