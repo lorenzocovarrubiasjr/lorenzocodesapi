@@ -1,1 +1,1 @@
-web: lorenzocodes-api
+web: bin/lorenzocodes-api

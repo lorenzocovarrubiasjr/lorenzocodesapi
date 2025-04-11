@@ -1,0 +1,33 @@
+# Common development files to exclude
+.git/
+.gitignore
+.idea/
+.vscode/
+
+# Go build artifacts
+*.exe
+*.test
+*.prof
+
+# Local configuration files
+*.local.yml
+*.local.yaml
+.env.local
+
+# Dependencies and build directories
+/vendor/
+/node_modules/
+
+# Test files
+*_test.go
+/test/
+
+# Temporary files
+/tmp/
+*.tmp
+
+# Only include the final binary if you're building locally
+# If you want EB to build the app, comment this out
+# /bin/
+# Except your compiled application binary that EB will use
+# !bin/application

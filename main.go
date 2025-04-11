@@ -46,7 +46,7 @@ func main() {
 	// Start server
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // Fallback for local testing
+		port = "5000" // Default to 5000 if PORT isn't set
 	}
 	log.Println("Server running on port", port)
 	log.Fatal(http.ListenAndServe(":"+port, corsHandler(r)))

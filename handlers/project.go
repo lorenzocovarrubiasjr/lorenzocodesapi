@@ -3,6 +3,7 @@ package handlers
 import (
 	"context"
 	"encoding/json"
+	"log"
 	"net/http"
 
 	"lorenzocodes-api/db"
@@ -20,6 +21,7 @@ func GetProjects(w http.ResponseWriter, r *http.Request) {
 		TableName: aws.String("Projects"),
 	})
 	if err != nil {
+		log.Printf("DynamoDB Scan error: %v", err) // Add this for debugging
 		http.Error(w, "Failed to scan projects", http.StatusInternalServerError)
 		return
 	}
